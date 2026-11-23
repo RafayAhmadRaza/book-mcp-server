@@ -1,0 +1,20 @@
+# Local data — never commit books or the vector database
+data/
+*.db
+*.sqlite3
+books/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Local config
+.env
+
+# Editors
+.vscode/
+.idea/

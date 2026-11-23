@@ -1,0 +1,33 @@
+[project]
+name = "book-mcp-server"
+version = "0.1.0"
+description = "MCP server for semantic search over your own EPUB, PDF and scanned books"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Rafay Ahmad Raza" }]
+dependencies = [
+    "mcp>=2.2.0",
+    "pymilvus[milvus-lite]>=3.0.2",
+    "milvus-model>=0.2.12",
+    "transformers<5",
+    "langchain-text-splitters>=0.3.0",
+    "pymupdf>=1.24.0",
+    "pypdf>=5.0.0",
+    "pytesseract>=0.3.10",
+    "pillow>=10.0.0",
+    "ebooklib>=0.18",
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+book-mcp = "book_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["book_mcp*"]
