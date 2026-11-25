@@ -149,14 +149,6 @@ Copy `.env.example` to `.env` or export the variables directly.
 python scripts/search.py "What is the book about?" --collection ocr --book "My Field Guide"
 ```
 
-## Not in this repository
-
-* The Milvus database (`*.db`) — generated locally.
-* Book files (`books/`) — copyrighted material stays on your machine.
-* `.env` — local configuration.
-
-Both are covered by `.gitignore`.
-
 ## Tests
 
 ```bash
